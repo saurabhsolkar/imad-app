@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/ imad-app/entername.html ', function (req, res) {
+app.get('/ui/entername.html ', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', ' entername.html'));
 });
 
