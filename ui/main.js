@@ -19,5 +19,5 @@ request.onreadystatechange=function(){
 };
 var img=document.getElementById("two");
 img.onclick=function(){
-    img.style.marginRight="100px";
+    img.style.marginLeftt="100px";
 };
