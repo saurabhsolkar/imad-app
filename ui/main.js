@@ -17,3 +17,7 @@ request.onreadystatechange=function(){
   request.open('GET',"http://saurabhsolkar4.imad.hasura-app.io/counter",true);
   request.send(null);
 };
+var img=document.getElementById("two");
+img.onclick=function(){
+    img.style.marginRight="100px";
+};
