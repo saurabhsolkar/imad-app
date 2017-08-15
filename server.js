@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', ' imad-app/entername.html '));
+  res.sendFile(path.join(__dirname, 'ui', ' https://imad.hasura.io/code/files/entername.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
