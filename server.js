@@ -4,7 +4,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/iam.html', function (req, res) {
+app.get('/', function (req, res) {
   res.send("ye i am here!");
 });
 
