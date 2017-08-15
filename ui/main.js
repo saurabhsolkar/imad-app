@@ -3,5 +3,5 @@
 
 var img=document.getElementById("two");
 img.onclick=function(){
-    img.style.marginLeftt="100px";
+    img.style.marginLeft="100px";
 };
