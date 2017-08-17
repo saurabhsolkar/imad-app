@@ -1,9 +1,17 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var pool=require('pg'),pool;
 
 var app = express();
 app.use(morgan('combined'));
+var config={
+    user:"saurabhsolkar4",
+    database:"saurabhsolkar4",
+    host:"http://saurabhsolkar4.imad.hasura-app.io",
+    port:"5432"
+    
+    };
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -14,6 +22,9 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
+app.get('/test.db',finction(req,res)){
+    res.sendfile(path)
+}
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
