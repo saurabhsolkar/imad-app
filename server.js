@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 
 
 
-var pool=new pool(config);
+var pool = new Pool(config);
 
 app.get('/testdb', function (req, res) {
  // res.sendFile(path.join(__dirname, 'ui', 'index.html'));
