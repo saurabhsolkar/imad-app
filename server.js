@@ -9,12 +9,29 @@ var config={
     user:"saurabhsolkar4",
     database:"saurabhsolkar4",
     host:"http://saurabhsolkar4.imad.hasura-app.io",
-    port:"5432"
+    port:"5432",
+    password: process.env.DB_PASSWORD
     
     };
 
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+
+
+var pool=new pool(config);
+
+app.get('/test-db', function (req, res) {
+ // res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  pool.query('SELECT * from test',function(err,result){
+      if(err){
+         res.status(500).send(err.toString()); 
+      }else{
+          res.send(JSON.stringify(result));
+      }
+  });
 });
 
 var counter=0;
