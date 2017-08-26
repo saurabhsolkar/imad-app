@@ -41,7 +41,7 @@ app.get('/counter',function(req,res){
 });
 
 app.get('/ganpati.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'ganpati.html'));
+  res.sendFile(path.join(__dirname, '', 'ganpati.html'));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
