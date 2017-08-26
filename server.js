@@ -40,6 +40,9 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
+app.get('/ganpati.html',function(req,res){
+  res.sendFile(path.join(_dirname,'ui','ganpati.html'));  
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
