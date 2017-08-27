@@ -46,6 +46,9 @@ app.get('/counter',function(req,res){
 app.get('/ganpati.html', function (req, res) {
   res.sendFile(path.join(__dirname, '', 'ganpati.html'));
 });
+app.get('/index.html', function (req, res) {
+  res.sendFile(path.join(__dirname, '', 'index.html'));
+});
 app.get('/myprofile.html', function (req, res) {
   res.sendFile(path.join(__dirname, '', 'myprofile.html'));
 });
