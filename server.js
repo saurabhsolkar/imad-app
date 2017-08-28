@@ -63,7 +63,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 app.get('/imad-app/myvideo.mp4', function (req, res) {
-  res.sendFile(path.join(__dirname, '', 'myvideo.mp4'));
+  res.sendFile(path.join(__dirname, 'ui', 'myvideo.mp4'));
 });
 
 
