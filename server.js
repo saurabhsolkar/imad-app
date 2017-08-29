@@ -40,6 +40,13 @@ app.get('/test', function (req, res) {
 var counter=0;
 app.get('/counter',function(req,res){
     counter=counter+1;
+    pool.query('insert into counter(counterv) values ($1)',[counter],function (err, result) {
+                            if (err) {
+                                res.status(500).send(err.toString());
+                            } else {
+                                res.status(200).send('Comment inserted!')
+                            }
+});
     res.send(counter.toString());
 });
 
