@@ -11,6 +11,8 @@ submit.onclick-function(){
              console.log('sucess');
               alert('comment inserted successfully');
 
+         }else if(request.statu===500){
+             alert('error! not entred successfully ');
          }
      }   
         
