@@ -58,7 +58,7 @@ var name=req.body.name;
       if (err) {
           res.status(500).send(err.toString());
       } else {
-          res.send(name + comment);
+          res.send('' + comment);
       }
 });
     
