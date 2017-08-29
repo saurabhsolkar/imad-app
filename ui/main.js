@@ -1,7 +1,21 @@
  console.log('Loaded!');
  var submit = document.getElementById('submit');
 
-var img=document.getElementById("two");
-img.onclick=function(){
-    img.style.marginLeft="100px";
-};
+
+submit.onclick-function(){
+    var request=new XMLHTTPRequest();
+    request.onreadystatechange=function(){
+        
+     if(request.ReadyState==XMLHTTPRequest.DONE){
+         if(request.Status===200){
+             console.log('sucess');
+              alert('comment inserted successfully');
+
+         }
+     }   
+        
+        
+    }
+    
+    
+}
