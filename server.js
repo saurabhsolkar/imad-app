@@ -25,19 +25,6 @@ app.get('/myprofile', function (req, res) {
 });
 
 
-var pool = new Pool(config);
-
-app.get('/test', function (req, res) {
- // res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-  pool.query('SELECT * from user',function(err,result){
-      if(err){
-         res.status(500).send(err.toString()); 
-      }else{
-          res.send(JSON.stringify(result));
-      }
-  });
-});
-
 var counter=0;
 app.get('/cnt',function(req,res){
     counter=counter+1;
@@ -63,7 +50,11 @@ app.get('/hash/:input', function(req, res) {
    res.send(hashedString);
 });
 
-
+app.get('/comment',function(req,res){
+   var  username=req.body.username;
+   var password=req.body.password;
+    
+});
 
 
 app.post('/create-user', function (req, res) {
