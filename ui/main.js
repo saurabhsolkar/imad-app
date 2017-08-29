@@ -18,5 +18,8 @@ submit.onclick-function(){
     };
     
   var name=document.getElementById('name').value;  
-   var comment=document.getElementById('comment').value;  
+   var comment=document.getElementById('comment').value; 
+   console.log(name);
+   console.log(comment);
+   reuest.open('POST','http://saurabhsolkar4.imad.hasura-app.io/comment',true);
 };
