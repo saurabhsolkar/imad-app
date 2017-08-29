@@ -26,7 +26,7 @@ app.get('/myprofile', function (req, res) {
 
 
 var counter=0;
-app.get('/cnt',function(req,res){
+app.get('/t',function(req,res){
     counter=counter+1;
     pool.query("insert into cnt(cnt1) values ($1)",[counter],function (err, result) {
                             if (err) {
