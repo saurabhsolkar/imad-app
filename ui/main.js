@@ -21,5 +21,6 @@ submit.onclick-function(){
    var comment=document.getElementById('comment').value; 
    console.log(name);
    console.log(comment);
-   reuest.open('POST','http://saurabhsolkar4.imad.hasura-app.io/comment',true);
+   request.open('POST','http://saurabhsolkar4.imad.hasura-app.io/comment',true);
+   request.send(JSON.stringify({name:name, comment:comment})); 
 };
