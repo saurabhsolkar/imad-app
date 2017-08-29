@@ -28,7 +28,7 @@ var pool = new Pool(config);
 
 app.get('/testdb', function (req, res) {
  // res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-  pool.query('SELECT * from test where password='sss',function(err,result){
+  pool.query('SELECT * from test where password="sss",function(err,result){
       if(err){
          res.status(500).send(err.toString()); 
       }else{
