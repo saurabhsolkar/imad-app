@@ -51,8 +51,25 @@ app.get('/hash/:input', function(req, res) {
 });
 
 app.get('/comment',function(req,res){
-   var  username=req.body.username;
-   var password=req.body.password;
+var name=req.body.name;
+   var  comment=req.body.comment;
+
+   pool.query('INSERT INTO "user" (name, comment) VALUES ($1, $2)', [name, comment], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(name + comment);
+      }
+});
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 });
 
