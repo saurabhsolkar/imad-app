@@ -15,7 +15,8 @@ submit.onclick-function(){
      }   
         
         
-    }
+    };
     
-    
-}
+  var name=document.getElementById('name').value;  
+   var comment=document.getElementById('comment').value;  
+};
