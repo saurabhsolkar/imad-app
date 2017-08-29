@@ -24,5 +24,6 @@ submit.onclick-function(){
    console.log(name);
    console.log(comment);
    request.open('POST','http://saurabhsolkar4.imad.hasura-app.io/comment',true);
+    request.setRequestHeader('Content-Type', 'application/json');
    request.send(JSON.stringify({name:name, comment:comment})); 
 };
