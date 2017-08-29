@@ -50,11 +50,11 @@ app.get('/hash/:input', function(req, res) {
    res.send(hashedString);
 });
 
-app.get('/comment',function(req,res){
+app.get('/cnt',function(req,res){
 var name=req.body.name;
    var  comment=req.body.comment;
 
-   pool.query('INSERT INTO "cnt" (name, comment1) VALUES ($1, $2)', [name, comment], function (err, result) {
+   pool.query("INSERT INTO cnt (name, comment1) VALUES ($1, $2)", [name, comment], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
